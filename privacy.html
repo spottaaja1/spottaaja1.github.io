@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Yazio Sync</title>
+  <meta name="description" content="Privacy policy for Yazio Sync, a personal tool that copies its owner's nutrition entries into his Google Health account.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="brand">Yazio Sync</p>
+      <nav aria-label="Site">
+        <a href="index.html">Home</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective date: 22 November 2026</p>
+      <p>Yazio Sync is a private, single-user tool run by its owner, Saku, on his own computer. It is not offered to the public. This policy describes the data the tool accesses, why it accesses that data, and where the data is kept.</p>
+
+      <h2>Who this applies to</h2>
+      <p>The only person whose data the tool handles is its owner. There are no other users and no public signup.</p>
+
+      <h2>Data accessed</h2>
+      <p>From the owner's Yazio account, the tool reads his own food log:</p>
+      <ul>
+        <li>foods</li>
+        <li>energy (kcal)</li>
+        <li>carbohydrates</li>
+        <li>fat</li>
+        <li>protein</li>
+      </ul>
+      <p>From the owner's Google Health account, through the Google Health API, the tool uses OAuth scopes for nutrition read and write:</p>
+      <ul>
+        <li><code>https://www.googleapis.com/auth/googlehealth.nutrition.readonly</code> — to see nutrition data already in the owner's Google Health account</li>
+        <li><code>https://www.googleapis.com/auth/googlehealth.nutrition.writeonly</code> — to add nutrition data to that account (Google's permission also allows the tool to edit or delete nutrition data that the tool itself added)</li>
+      </ul>
+      <p>The tool does not request other Google data, such as email, contacts, location, files, or other health data types.</p>
+
+      <h2>Purpose</h2>
+      <p>The only purpose is to copy the owner's nutrition entries from his Yazio food log into his own Google Health account, and to avoid writing an entry that is already there. Data is not used for any other purpose.</p>
+      <p>Nutrition data read from Google Health is used only to decide whether an entry has already been copied. It is not sent to Yazio.</p>
+
+      <h2>Storage</h2>
+      <p>Credentials and a small sync ledger are stored locally on the owner's private machine. The ledger records enough to remember which entries have already been copied, so the same entry is not written twice.</p>
+      <p>Those credentials and that ledger stay on that machine. They are not shared. They are not sold. They are not used for advertising or for training artificial intelligence models. No third party is given access to them. The tool does not upload them to a server of its own.</p>
+      <p>The owner controls the files on his computer and can delete the stored credentials and the sync ledger by deleting those local files.</p>
+
+      <h2>Sharing</h2>
+      <p>Nutrition entries are written only to the owner's own Google Health account. That is the copy the tool exists to make. They are not sold, not shared with other people or companies, and not used for advertising or for training artificial intelligence models. No third party is given the data.</p>
+
+      <h2>Google API Services User Data Policy</h2>
+      <p>Yazio Sync's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+      <p>The use of information received from Google Health API and/or Developer Tools will adhere to the <a href="https://developers.google.com/health/policies/health-api-developer-user-data-policy">Google Health API Developer and User Data Policy</a>, including the Limited Use requirements.</p>
+      <p>In line with those Limited Use requirements, Google user data is used only to provide the sync described on this page: copying the owner's nutrition entries into his Google Health account and skipping duplicates. It is not sold, not used to serve ads, not transferred to third parties, and not read by anyone other than the owner while he runs the tool on his own computer. Humans are not given access to that data for any other reason.</p>
+
+      <h2>Revoking access</h2>
+      <p>The owner can revoke Yazio Sync's access to his Google account at any time on Google's permissions page: <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</p>
+      <p>After access is revoked, the tool can no longer read or write Google Health nutrition data. Copies of credentials and the sync ledger that are already stored on the owner's computer remain there until he deletes them.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy can be raised by opening a <a href="https://github.com/spottaaja1/spottaaja1.github.io/issues">GitHub issue on this repository</a>.</p>
+
+      <h2>Changes</h2>
+      <p>If the tool's data practices change, this page will be updated before those practices are used, and the effective date above will change.</p>
+    </main>
+    <footer>
+      <p><a href="index.html">Home</a> · <a href="terms.html">Terms of Service</a></p>
+    </footer>
+  </div>
+</body>
+</html>
